@@ -60,9 +60,7 @@ public class ResponseHelper
     {
         cleanResponse();
         response.putBoolean("didCancel", true);
-        if (callback != null) {
-            invokeResponse(callback);
-        }
+        invokeResponse(callback);
     }
 
     public void invokeError(@NonNull final Callback callback,
@@ -70,9 +68,7 @@ public class ResponseHelper
     {
         cleanResponse();
         response.putString("error", error);
-        if (callback != null) {
-            invokeResponse(callback);
-        }
+        invokeResponse(callback);
     }
 
     public void invokeResponse(@NonNull final Callback callback)
